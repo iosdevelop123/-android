@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#030014">
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:id="@+id/nametextView"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/abc_dialog_padding_material"
+        android:layout_below="@+id/button_hold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:textAlignment="center" />
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/buyMorePrice"-->
+        <!--android:id="@+id/textView2"-->
+        <!--android:layout_marginLeft="23dp"-->
+        <!--android:layout_toEndOf="@+id/setBtn"-->
+        <!--android:layout_above="@+id/textView32" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/buyLessPrice"-->
+        <!--android:id="@+id/textView3"-->
+        <!--android:layout_marginLeft="23dp"-->
+        <!--android:layout_alignEnd="@+id/usrBtn"-->
+        <!--android:layout_above="@+id/textView32" />-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/textView_priceText"
+        android:layout_centerHorizontal="true"
+        android:textColor="#030014"
+        android:backgroundTint="#030014" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:text="@string/chicang"
+        android:id="@+id/button_hold"
+        android:layout_alignTop="@+id/usrBtn"
+        android:layout_alignRight="@+id/nametextView"
+        android:layout_alignEnd="@+id/nametextView"
+        android:background="@drawable/jinse" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:text="@string/buy"
+        android:id="@+id/button"
+        android:background="@drawable/huise"
+        android:layout_alignTop="@+id/button_hold"
+        android:layout_alignLeft="@+id/nametextView"
+        android:layout_alignStart="@+id/nametextView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buymore"
+        android:id="@+id/button_buyMore"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:background="@drawable/buymore"
+        android:layout_alignBaseline="@+id/button_buyLess"
+        android:layout_alignBottom="@+id/button_buyLess"
+        android:layout_alignStart="@+id/setBtn"
+        android:layout_toStartOf="@+id/nametextView" />
+
+    <ImageButton
+        android:id="@+id/setBtn"
+        android:background="@mipmap/setting"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="8dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buyNum"
+        android:id="@+id/buyNumTextView"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@+id/button_buyMore"
+        android:layout_alignBottom="@+id/button_buyMore"
+        android:layout_toEndOf="@+id/button_buyMore" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:id="@+id/shoushutextView"
+        android:textColor="#eac281"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@+id/buyNumTextView"
+        android:layout_alignBottom="@+id/buyNumTextView"
+        android:layout_toEndOf="@+id/buyNumTextView" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/spread_line_chart"
+        android:layout_width="match_parent"
+        android:layout_height="620dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView_priceText"
+        android:layout_above="@+id/chooseNum"
+        android:background="@android:color/background_dark" />
+
+    <ImageButton
+        android:id="@+id/usrBtn"
+        android:background="@mipmap/user"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/setBtn"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="12dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buyless"
+        android:id="@+id/button_buyLess"
+        android:background="@drawable/shape"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:layout_marginBottom="84dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/usrBtn"
+        android:layout_toEndOf="@+id/nametextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/price"
+        android:id="@+id/textView_priceText"
+        android:textColor="#eac281"
+        android:textSize="45sp"
+        android:textAlignment="center"
+        android:layout_below="@+id/nametextView"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:id="@+id/chooseNum"
+        android:layout_alignBottom="@+id/shoushutextView"
+        android:layout_alignEnd="@+id/textView_priceText"
+        android:layout_toEndOf="@+id/button_buyMore" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/daojishi"
+        android:textSize="45sp"
+        android:textColor="@android:color/background_light"
+        android:layout_alignTop="@+id/nametextView"
+        android:layout_toStartOf="@+id/usrBtn" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="@drawable/jinse"
+        android:weightSum="1"
+        android:id="@+id/linearLayout"
+        android:layout_height="40dp"
+        android:layout_below="@+id/button_buyMore"
+        android:layout_marginTop="22dp"
+        android:layout_alignStart="@+id/textView_priceText"
+        android:layout_alignEnd="@+id/chooseNum">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="@string/_11111"
+                android:id="@+id/textView6"
+                android:textColor="#030014"
+                android:textSize="30sp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/textView7" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shou"
+                android:id="@+id/textView7"
+                android:textSize="20sp"
+                android:textColor="#494848"
+                android:layout_marginEnd="12dp"
+                android:layout_alignBaseline="@+id/textView6"
+                android:layout_alignBottom="@+id/textView6"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/netImgBtn"
+        android:background="#e0000000"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/button_buyMore"
+        android:layout_alignEnd="@+id/button_buyLess" />
+
+</RelativeLayout>

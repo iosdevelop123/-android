@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="恒生指数"
+                android:id="@+id/textView11"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="#0069d5"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="17dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="看多"
+                android:id="@+id/textView15"
+                android:layout_marginTop="18dp"
+                android:layout_below="@+id/textView11"
+                android:layout_alignLeft="@+id/textView11"
+                android:layout_alignStart="@+id/textView11"
+                android:textColor="#ffffff"
+                android:layout_marginBottom="10dp"
+                android:textSize="12dp"
+                android:background="#ff4320"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="22手"
+                android:id="@+id/textView18"
+                android:textColor="#ff0000"
+                android:layout_alignBottom="@+id/textView11"
+                android:layout_toRightOf="@+id/textView11"
+                android:layout_toEndOf="@+id/textView11"
+                android:layout_marginLeft="7dp"
+                android:layout_marginStart="7dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="手续费:-800"
+                android:id="@+id/textView20"
+                android:textColor="#fca015"
+                android:layout_alignBottom="@+id/textView15"
+                android:layout_toRightOf="@+id/textView15"
+                android:layout_toEndOf="@+id/textView15"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="2015-12-07"
+                android:id="@+id/textView21"
+                android:textColor="#737373"
+                android:layout_alignTop="@+id/textView18"
+                android:layout_centerHorizontal="true"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="--"
+                android:id="@+id/textView23"
+                android:textColor="#717171"
+                android:layout_centerHorizontal="true"
+                android:textSize="14sp"
+                android:layout_alignBottom="@+id/textView24"
+                android:layout_alignTop="@+id/textView15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="11:03"
+                android:id="@+id/textView24"
+                android:textColor="#6c6c6c"
+                android:textSize="14sp"
+                android:layout_alignTop="@+id/textView25"
+                android:layout_toLeftOf="@+id/textView23"
+                android:layout_toStartOf="@+id/textView23" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="12:55"
+                android:id="@+id/textView25"
+                android:textSize="14sp"
+                android:textColor="#8a8a8a"
+                android:layout_alignTop="@+id/textView30"
+                android:layout_toRightOf="@+id/textView23"
+                android:layout_toEndOf="@+id/textView23" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="->"
+                android:id="@+id/textView29"
+                android:layout_alignTop="@+id/textView28"
+                android:layout_toLeftOf="@+id/textView28"
+                android:layout_toStartOf="@+id/textView28"
+                android:textSize="18sp"
+                android:textColor="#686868" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="22222"
+                android:id="@+id/textView30"
+                android:layout_alignTop="@+id/textView29"
+                android:layout_toLeftOf="@+id/textView29"
+                android:layout_toStartOf="@+id/textView29"
+                android:textSize="18sp"
+                android:textColor="#636363" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="33333"
+                android:id="@+id/textView28"
+                android:textColor="#7e7e7e"
+                android:textSize="18sp"
+                android:layout_alignTop="@+id/textView20"
+                android:layout_alignEnd="@+id/textView26" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="$"
+                android:id="@+id/textView26"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="#707070"
+                android:textSize="24sp"
+                android:layout_alignBaseline="@+id/textView27"
+                android:layout_alignBottom="@+id/textView27"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="999999"
+                android:id="@+id/textView27"
+                android:textColor="#ff0000"
+                android:textSize="30sp"
+                android:layout_alignTop="@+id/textView21"
+                android:layout_toStartOf="@+id/textView26" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="#030014"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/name"
+                android:id="@+id/textView"
+                android:textColor="#0069d5"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="18dp"
+                android:text="@string/buymore"
+                android:id="@+id/textView14"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="bottom"
+                android:textColor="#ffffff"
+                android:layout_below="@+id/textView"
+                android:layout_alignLeft="@+id/textView"
+                android:layout_alignStart="@+id/textView"
+                android:layout_marginTop="13dp"
+                android:background="#7c0000"
+                android:textSize="13dp"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="2000"
+                android:id="@+id/textView_buyNum"
+                android:textColor="#ff0000"
+                android:layout_alignBottom="@+id/textView"
+                android:layout_toRightOf="@+id/textView"
+                android:layout_toEndOf="@+id/textView"
+                android:layout_marginLeft="14dp"
+                android:layout_marginStart="14dp"
+                android:textSize="18sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="手"
+                android:id="@+id/textView16"
+                android:textColor="#ff0000"
+                android:layout_above="@+id/textView14"
+                android:layout_toRightOf="@+id/textView_buyNum"
+                android:layout_toEndOf="@+id/textView_buyNum"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手续费:"
+                android:id="@+id/textView17"
+                android:textColor="#f5ab19"
+                android:textSize="18sp"
+                android:layout_alignBottom="@+id/textView14"
+                android:layout_toRightOf="@+id/textView14"
+                android:layout_toEndOf="@+id/textView14"
+                android:layout_marginLeft="7dp"
+                android:layout_marginStart="7dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="$"
+                android:id="@+id/textView19"
+                android:textColor="#8d8c8c"
+                android:textSize="15dp"
+                android:layout_alignBaseline="@+id/textView16"
+                android:layout_alignBottom="@+id/textView16"
+                android:layout_alignEnd="@+id/textView_closePrice" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/OrderNumber"
+                android:layout_alignBottom="@+id/textView_counterFee"
+                android:layout_toRightOf="@+id/textView_counterFee"
+                android:layout_toEndOf="@+id/textView_counterFee"
+                android:textColor="#030014" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-80"
+                android:id="@+id/textView_counterFee"
+                android:textSize="18sp"
+                android:textColor="#f7af43"
+                android:layout_alignBaseline="@+id/textView17"
+                android:layout_alignBottom="@+id/textView17"
+                android:layout_toEndOf="@+id/textView17" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="22222"
+                android:id="@+id/textView_closePrice"
+                android:textSize="18sp"
+                android:textColor="#828282"
+                android:layout_marginRight="9dp"
+                android:layout_below="@+id/textView_price"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="37dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="->"
+                android:id="@+id/textView22"
+                android:textColor="#797979"
+                android:textSize="18sp"
+                android:layout_below="@+id/textView_price"
+                android:layout_toStartOf="@+id/textView_closePrice" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="23333"
+                android:id="@+id/textView_openPrice"
+                android:textColor="#7f7e7e"
+                android:textSize="18sp"
+                android:layout_below="@+id/textView_price"
+                android:layout_toStartOf="@+id/textView22" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+100000"
+                android:id="@+id/textView_price"
+                android:textColor="#ff0000"
+                android:textSize="25dp"
+                android:layout_alignBaseline="@+id/textView19"
+                android:layout_alignBottom="@+id/textView19"
+                android:layout_toStartOf="@+id/textView19" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">恒德8.0</string>
+    <string name="action_settings">Settings</string>
+    <string name="name">恒生指数</string>
+    <string name="buyNum">委托手数:</string>
+    <string name="lighting">闪电图</string>
+    <string name="buymore">看多</string>
+    <string name="buyless">看空</string>
+    <string name="allsell">全部清仓</string>
+    <string name="price">0.00</string>
+    <string name="buyMorePrice">22222</string>
+    <string name="buyLessPrice">11111</string>
+    <string name="buyOnce">追单</string>
+    <string name="Reverseposition">反向开仓</string>
+    <string name="historyHold">历史记录</string>
+    <string name="pulldown">下拉更新</string>
+    <string name="yingkui">盈亏</string>
+    <string name="$">$</string>
+    <string name="chicang">持仓</string>
+    <string name="_1234567890">0</string>
+    <string name="_11111">0</string>
+    <string name="shou">手</string>
+    <string name="buy">买入</string>
+    <string name="网络">您当前使用的是2/3/4G网络</string>
+</resources>

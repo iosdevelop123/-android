@@ -1,0 +1,465 @@
+1.用户登录(TransformData)
+2.获取个人信息(TransformData)
+3.获取货币列表(TransformData)
+4.修改个人信息(SetData)
+5.获取历史行情数据(TransformData)
+6.获取最新行情数据(TransformData)
+7.获取在仓订单(TransformData)
+8.看多开仓(SetData)
+9.看空开仓(SetData)
+10.单笔平仓(SetData)
+11.全部清仓(SetData)
+12.获取历史订单(TransformData)
+13.获取服务器时间(TransformData)
+14.获取货币交易时间(GetData)
+15.获取货币交易强行关闭时间(GetData)
+16.获取账户余额(TransformData)
+17.获取自动平仓的余额(GetData)
+18.操作日志(SetData)
+19.用户退出(SetData)
+
+1.用户登录(TransformData)
+{
+    传入数据:
+    {
+        "TaskGuid":"ab8495db-3a4a-4f70-bb81-8518f60ec8bf",
+        "DataType":"Query",
+        "Password":"test1234",
+        "LoginAccount":"1317"
+    }
+    登录成功返回: "True"  登录失败返回: {"ErrMessage":"用户名或密码错误"}
+}
+2.获取个人信息(TransformData)
+{
+    传入数据:
+    {
+        "TaskGuid":"ab8495db-3a4a-4f70-bb81-8518f60ec8bf",
+        "DataType":"QueryInfo",
+        "LoginAccount":"1317"
+    }
+    获取成功返回:
+    {
+        "ID":64,
+        "Name":"1317",
+        "Sex":"",
+        "Email":"",
+        "Phone":"",
+        "Address":"",
+        "AgentID":1,
+        "AgentCode":"0102",
+        "LoginAccount":"1317",
+        "PassWord":"",
+        "CarID":"",
+        "HeadPic":"",
+        "NickName":"1317"
+    }
+    获取失败返回:(一般不会出现)
+    {
+        "ID"0,
+        "Name":null,
+        "Sex":null,
+        "Email":null,
+        "Phone":null,
+        "Address":null,
+        "AgentID":null,
+        "AgentCode":null,
+        "LoginAccount":null,
+        "PassWord":null,
+        "CarID":null,
+        "HeadPic":null,
+        "NickName":null
+    }
+}
+3.获取货币列表(TransformData)
+{
+    传入数据:
+    {
+        "TaskGuid":"b4026263-704e-4e12-a64d-f79cb42962cc",
+        "DataType":"HBList"
+    }
+    获取成功返回:
+    [
+         {
+             "Name": "美原油",
+             "Bh": "CLF6",
+             "Increment": 0.01,
+             "USD": 20,
+             "Converts": 100,
+             "Price": 0,
+             "ASKPrice": 0,
+             "State": 1
+         },
+         {
+             "Name": "恒生指数",
+             "Bh": "HKZ5",
+             "Increment": 1,
+             "USD": 13,
+             "Converts": 1,
+             "Price": 0,
+             "ASKPrice": 0,
+             "State": 0
+         }
+     ]
+}
+4.修改个人信息(SetData)
+{
+    传入数据:
+    {
+        "TaskGuid":"ab8495db-3a4a-4f70-bb81-8518f60ec8bf",
+        "DataType":"Account",
+        "ID":1,
+        "Name":"wudong",
+        "Sex":"",
+        "Email":"",
+        "Phone":"",
+        "AddUser":"",
+        "AddDate":"2013-01-01T00:00:00",
+        "Address":"1",
+        "AgentID":1,
+        "LoginID":"1317",
+        "CarID":"",
+        "HeadPic":"",
+        "NickName":""
+    }
+    修改成功返回: "True"
+}
+5.获取历史行情数据(TransformData)
+{
+    传入数据:
+    {
+        "DriverID":"1234567890",
+        "TaskGuid":"ab8495db-3a4a-4f70-bb81-8518f60ec8bf",
+        "DataType":"MT4DataHistory",
+        "Top":"500",
+        "Type":"CLF6"
+    }
+    获取成功返回:
+    [
+        {"data":"1449046557,CLF6,41.63,41.64"},
+        {"data":"1449046556,CLF6,41.62,41.63"},
+        ...
+    ]
+    获取失败返回: [{"data":""}]
+}
+6.获取最新行情数据(TransformData)
+{
+    传入数据:
+    {
+        "DriverID":"1234567890",
+        "TaskGuid":"ab8495db-3a4a-4f70-bb81-8518f60ec8bf",
+        "DataType":"MT4Data",
+        "Type":"CLF6,HKZ5"
+    }
+    获取成功返回: "1449047239,CLF6,41.67,41.68@1449047239,HKZ5,22486,22487"
+    获取失败返回: "@"
+}
+7.获取在仓订单(TransformData)
+{
+    传入数据:
+    {
+        "DriverID":"1234567890",
+        "TaskGuid":"ab8495db-3a4a-4f70-bb81-8518f60ec8bf",
+        "DataType":"ClientOpenTrades",
+        "LoginAccount":"1317",
+    }
+    获取成功返回:
+    [
+        {
+            "Check":false,
+            "TypeName":"多",
+            "SymbolName":null,
+            "Activation":0,
+            "AgentCommission":0.0,
+            "ClosePrice":41.64,
+            "CloseTime":"1970-01-01T07:00:00",
+            "CloseTimeMRSF":"01-01 07:00",
+            "Comment":"看多",
+            "Commission":-40.0,
+            "Conv_rates_close":0.0,
+            "Conv_rates_open":1.0,
+            "Digits":2,
+            "Expiration":0.0,
+            "Login":1317,
+            "Magic":0,
+            "Margin_rate":1.0,
+            "OpenPrice":41.65,
+            "OpenTime":"2015-12-02T16:05:21",
+            "OpenTimeMRSF":"12-02 16:05",
+            "OrderNumber":13536460,
+            "Profit":-20.0,
+            "State":0,
+            "StopLoss":0.0,
+            "Swaps":0.0,
+            "Symbol":"CLF6",
+            "TakeProfit":0.0,
+            "Taxes":0.0,
+            "Timestamp":1449047121.0,
+            "Type":"buy",
+            "Volume":1.0
+        },
+        ...
+     ]
+    获取失败返回: []
+    
+}
+8.看多开仓(SetData)
+{
+    传入数据:
+    {
+        "DriverID":"1234567890",
+        "TaskGuid":"ab8495db-3a4a-4f70-bb81-8518f60ec8bf",
+        "DataType":"OpenBuy-New",
+        "LoginAccount":"1317",
+        "Symbol":"CLF6",
+        "Volume":"1",
+        "StopLoss":"0",
+        "TakeProfit":"0",
+        "Comment":"看多"
+    }
+    看多开仓成功返回:
+    {
+        "Comment":"����",
+        "Expiration":0.0,
+        "Login":1317,
+        "OrderNumber":13536655,
+        "Price":41.66,
+        "Symbol":"CLF6",
+        "Type":0,
+        "Volume":1.0
+    }
+}
+9.看空开仓(SetData)
+{
+    传入数据:
+    {
+        "DriverID":"1234567890",
+        "TaskGuid":"ab8495db-3a4a-4f70-bb81-8518f60ec8bf",
+        "DataType":"OpenSell-New",
+        "LoginAccount": "1317",
+        "Symbol":"CLF6",
+        "Volume":"1",
+        "StopLoss":"0",
+        "TakeProfit":"0",
+        "Comment":"看空"
+    }
+    看空开仓成功返回:
+    {
+        "Comment":"����",
+        "Expiration":0.0,
+        "Login":1317,
+        "OrderNumber":13536687,
+        "Price":41.58,
+        "Symbol":"CLF6",
+        "Type":1,
+        "Volume":1.0
+    }
+}
+10.单笔平仓(SetData)
+{
+    传入数据:
+    {
+        "DriverID":"1234567890",
+        "TaskGuid": "ab8495db-3a4a-4f70-bb81-8518f60ec8bf",
+        "DataType": "CloseOrder",
+        "OrderNumber":"13536651",
+        "Volume":"1",
+        "LoginAccount":"1317"
+    }
+    平仓成功返回: "True"
+}
+11.全部清仓(SetData)
+{
+    传入数据:
+    {
+        "DriverID":"1234567890",
+        "TaskGuid":"ab8495db-3a4a-4f70-bb81-8518f60ec8bf",
+        "DataType":"CloseOrderS",
+        "OrderNumberS":"13536655,13536687",
+        "LoginAccount":"1317"
+    }
+    平仓成功返回: "True"
+}
+12.获取历史订单(TransformData)
+{
+    传入数据:
+    {
+        "DriverID":"1234567890",
+        "TaskGuid":"ab8495db-3a4a-4f70-bb81-8518f60ec8bf",
+        "DataType":"ClientCloseTrades",
+        "LoginAccount":"1317",
+        "StartTime":"1448961616",
+        "EndTime":"1449134416"
+    }
+    获取成功返回:
+    [
+        {
+             "Check": false,
+             "TypeName": "多",
+             "SymbolName": null,
+             "Activation": 0,
+             "AgentCommission": 0,
+             "ClosePrice": 42.15,
+             "CloseTime": "2015-12-01T17:18:18",
+             "CloseTimeMRSF": "12-01 17:18",
+             "Comment": "看多[烫烫烫烫烫烫烫烫烫烫烫烫?",
+             "Commission": -40,
+             "Conv_rates_close": 1,
+             "Conv_rates_open": 1,
+             "Digits": 2,
+             "Expiration": 3599,
+             "Login": 1317,
+             "Magic": 0,
+             "Margin_rate": 1,
+             "OpenPrice": 42.02,
+             "OpenTime": "2015-12-01T15:57:25",
+             "OpenTimeMRSF": "12-01 15:57",
+             "OrderNumber": 13527609,
+             "Profit": 260,
+             "State": 0,
+             "StopLoss": 0,
+             "Swaps": 0,
+             "Symbol": "CLF6",
+             "TakeProfit": 0,
+             "Taxes": 0,
+             "Timestamp": 1448965098,
+             "Type": "buy",
+             "Volume": 1
+        },
+        ...
+     ]
+}
+13.获取服务器时间(TransformData)
+{
+    传入数据:
+    {
+        "TaskGuid":"b4026263-704e-4e12-a64d-f79cb42962cc",
+        "DataType":"ServerTime"
+    }
+    获取成功返回: "2015/12/2 17:42:34" (比北京时间早了36秒)
+}
+14.获取货币交易时间(GetData)
+{
+    传入数据:
+    {
+        "TaskGuid":"b4026263-704e-4e12-a64d-f79cb42962cc",
+        "DataType":"HBWorkTime"
+    }
+    获取成功返回:
+    [
+        {
+            "HB": "HKZ5",
+            "Start_Time": "09:15:00",
+            "End_Time": "12:00:00"
+        },
+        {
+            "HB": "HKZ5",
+            "Start_Time": "13:00:00",
+            "End_Time": "16:10:00"
+        }
+    ]
+}
+15.获取货币交易强行关闭时间(GetData)
+{
+    传入数据:
+    {
+        "TaskGuid":"b4026263-704e-4e12-a64d-f79cb42962cc",
+        "DataType":"HBCloseTime"
+    }
+    获取成功返回:
+    [
+        {
+            "BH": "CLF6",
+            "CloseTime": "05:58:00"
+        }
+    ]
+}
+16.获取账户余额(TransformData)
+{
+    传入数据:
+    {
+        "TaskGuid":"ab8495db-3a4a-4f70-bb81-8518f60ec8bf",
+        "DataType":"ClientRecord",
+        "LoginAccount":"1317",
+    }
+    获取成功返回:
+    {
+        "Address": "",
+        "Agent_account": 0,
+        "Balance": 973045.91,(账户余额)
+        "Balance_status": 0,
+        "City": "",
+        "Comment": "15000,0",
+        "Country": "Singapore",
+        "Credit": 0,
+        "Email": "",
+        "Enable": 1,
+        "Enable_change_password": 1,
+        "Enable_read_only": 0,
+        "Enable_reserved_0": 0,
+        "Enable_reserved_1": 0,
+        "Enable_reserved_2": 0,
+        "Group": "CN_CFD",
+        "Id": "",
+        "Interestrate": 0,
+        "Lastdate": 1449007551,
+        "Leverage": 100,
+        "Login": 1317,
+        "Name": "CN CFD test",
+        "Password": "",
+        "Password_investor": "",
+        "Password_phone": "",
+        "Phone": "",
+        "Prevbalance": 975067.91,
+        "Prevequity": 0,
+        "Prevmonthbalance": 988933.91,
+        "Prevmonthequity": 0,
+        "Publickey": "",
+        "Regdate": 1444832704,
+        "Reserved_0": 0,
+        "Reserved2_0": 0,
+        "Reserved2_1": 0,
+        "Send_reports": 1,
+        "State": "",
+        "Status": "",
+        "Taxes": 0,
+        "Timestamp": 1449010500,
+        "Zipcode": ""
+    }
+}
+17.获取自动平仓的余额
+{
+    传入数据:
+    {
+        "TaskGuid":"b4026263-704e-4e12-a64d-f79cb42962cc",
+        "DataType":"AtuoCloseBalance"
+    }
+    获取成功返回: "461.70"
+}
+18.操作日志(SetData)
+{
+    传入数据:（看多开仓为例）
+    {
+        "DriverID":"1234567890",
+        "UserID": "任务标识",
+        "TaskGuid": "b4026263-704e-4e12-a64d-f79cb42962cc",
+        "DataType": "OptionLog",
+        "LoginAccount": "1317",
+        "Text":"IP地址:180.173.244.194,操作时间:2015/12/15 9:01:09,openBuy,交易品种:CLF6,交易手数:1,盈利上限:0,止损上限:0,返回单号:13657564"
+    }
+    ps:
+        1.看多开仓:OpenBuy  看空开仓:OpenSell 单笔平仓:CloseOrder 全部清仓:CloseOrderS
+        2.单笔平仓的"Text":"IP地址:180.173.244.194,操作时间:2015/12/15 9:01:09,CloseOrder,返回单号:13657564"
+        3.单笔平仓的"Text":"IP地址:180.173.244.194,操作时间:2015/12/15 9:01:09,CloseOrderS,返回单号:13657564,13657565,13657566..."
+    操作成功返回:"true"
+    
+}
+19.用户退出(SetData)
+{
+    传入数据:
+    {
+        "TaskGuid":"ab8495db-3a4a-4f70-bb81-8518f60ec8bf",
+        "DataType":"DriverLoginOut",
+        "DriverID":"1234567890"
+    }
+    退出成功返回: "True"
+}
